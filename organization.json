@@ -1,0 +1,15 @@
+{
+  "id": "aws",
+  "name": "Amazon Web Services",
+  "description": "Amazon Web Services cloud platform and developer tools",
+  "website": "https://aws.amazon.com",
+  "color": "#ff9900",
+  "tools": [
+    {
+      "id": "kiro",
+      "name": "Kiro",
+      "skillInstallUrlPrefix": "kiro://install-skill?id=",
+      "mcpInstallUrlPrefix": "kiro://install-mcp?id="
+    }
+  ]
+}
