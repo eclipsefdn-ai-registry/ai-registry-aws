@@ -1,0 +1,17 @@
+{
+  "serverId": "com.amazon.aws/aws-mcp",
+  "date": "2026-07-27",
+  "installConfigs": [
+    {
+      "tool": "kiro",
+      "config": {
+        "mcpServers": {
+          "aws": {
+            "url": "https://aws-mcp.us-east-1.api.aws/mcp?oauth=initialize"
+          }
+        }
+      },
+      "instructions": "Adds AWS knowledge and tools"
+    }
+  ]
+}

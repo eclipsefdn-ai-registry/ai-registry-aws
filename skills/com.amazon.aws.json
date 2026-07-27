@@ -1,0 +1,15 @@
+{
+  "skillId": "com.amazon.aws",
+  "date": "2026-07-27",
+  "source": {
+    "url": "https://github.com/aws/agent-toolkit-for-aws.git",
+    "path": [
+      "skills/core-skills/*"
+    ]
+  },
+  "installConfigs": [
+    {
+      "tool": "kiro"
+    }
+  ]
+}
