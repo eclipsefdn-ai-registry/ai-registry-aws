@@ -7,9 +7,7 @@
   "tools": [
     {
       "id": "kiro",
-      "name": "Kiro",
-      "skillInstallUrlPrefix": "kiro://install-skill?id=",
-      "mcpInstallUrlPrefix": "kiro://install-mcp?id="
+      "name": "Kiro"
     }
   ]
 }
