@@ -1,6 +1,11 @@
 {
   "serverId": "com.amazon.aws/aws-mcp",
   "date": "2026-07-27",
+  "metadata": {
+    "name": "AWS MCP",
+    "description": "Official AWS MCP server providing AI agents with AWS knowledge and tools for building, deploying, and managing cloud infrastructure."
+  },
+  "selfPublished": true,
   "installConfigs": [
     {
       "tool": "kiro",
