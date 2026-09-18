@@ -1,0 +1,9 @@
+{
+  "pluginId": "io.github.awslabs/cli-agent-orchestrator",
+  "date": "2026-09-18",
+  "source": {
+    "url": "https://github.com/awslabs/cli-agent-orchestrator.git",
+    "path": "skills"
+  },
+  "installConfigs": [{ "tool": "kiro" }]
+}

@@ -1,0 +1,9 @@
+{
+  "skillId": "io.github.awslabs/agentcore-investigation",
+  "date": "2026-09-18",
+  "source": {
+    "url": "https://github.com/awslabs/mcp.git",
+    "path": "src/cloudwatch-mcp-server/skills/agentcore-investigation"
+  },
+  "installConfigs": [{ "tool": "kiro" }]
+}
