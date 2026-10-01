@@ -1,9 +1,0 @@
-{
-  "skillId": "io.github.awslabs/ash-mcp",
-  "date": "2026-09-18",
-  "source": {
-    "url": "https://github.com/awslabs/automated-security-helper.git",
-    "path": "skills/ash-mcp"
-  },
-  "installConfigs": [{ "tool": "kiro" }]
-}
