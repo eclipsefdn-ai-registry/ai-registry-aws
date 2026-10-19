@@ -6,6 +6,13 @@
     "description": "Official AWS MCP server providing AI agents with AWS knowledge and tools for building, deploying, and managing cloud infrastructure."
   },
   "selfPublished": true,
+  "config": {
+    "type": "streamable-http",
+    "url": "https://aws-mcp.us-east-1.api.aws/mcp?oauth=initialize",
+    "oauth": {},
+    "notes": "No API key is required: on first connection your client opens a browser to authorize access to your AWS account via OAuth. Provides AWS knowledge and tools for building, deploying, and managing cloud infrastructure.",
+    "serverKey": "aws"
+  },
   "installConfigs": [
     {
       "tool": "kiro",
