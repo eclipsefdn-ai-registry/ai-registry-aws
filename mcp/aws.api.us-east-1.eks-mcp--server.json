@@ -1,0 +1,29 @@
+{
+  "serverId": "aws.api.us-east-1.eks-mcp/server",
+  "date": "2026-09-18",
+  "installConfigs": [
+    {
+      "tool": "kiro",
+      "config": {
+        "mcpServers": {
+          "eks-mcp": {
+            "disabled": false,
+            "type": "stdio",
+            "command": "uvx",
+            "args": [
+              "mcp-proxy-for-aws@latest",
+              "https://eks-mcp.<region>.api.aws/mcp",
+              "--service",
+              "eks-mcp",
+              "--profile",
+              "<profile>",
+              "--region",
+              "<region>"
+            ]
+          }
+        }
+      },
+      "instructions": "Replace <region> with your AWS region (e.g. us-east-1) and <profile> with your AWS CLI profile name (e.g. default). Requires AWS CLI credentials configured locally and the eks-mcp:InvokeMcp/CallReadOnlyTool/CallPrivilegedTool IAM permissions."
+    }
+  ]
+}
