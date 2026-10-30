@@ -1,0 +1,34 @@
+{
+  "serverId": "com.amazon.aws/aws-devops-agent",
+  "date": "2026-10-30",
+  "metadata": {
+    "name": "AWS DevOps Agent",
+    "description": "Official remote MCP server for AWS DevOps Agent, giving AI agents access to an Agent Space to investigate incidents, review architecture, optimize costs, and map topology."
+  },
+  "selfPublished": true,
+  "config": {
+    "type": "streamable-http",
+    "url": "https://connect.aidevops.us-east-1.api.aws/mcp",
+    "headers": {
+      "Authorization": "Bearer ${DEVOPS_AGENT_TOKEN}"
+    },
+    "notes": "The URL uses us-east-1: replace it with the AWS Region of your Agent Space. DEVOPS_AGENT_TOKEN must hold an access token for that Agent Space: turn on access tokens on the Agent Space's Configuration tab in the AWS DevOps Agent console, then create one in the DevOps Agent web app under Settings > Access Tokens (scope read or operate, expiry 1 to 60 days). Set the client's request timeout to at least 120 seconds, since first responses can take 5 to 30 seconds. To sign requests with your local AWS credentials (SigV4) instead of a token, run the server through uvx mcp-proxy-for-aws@latest with --service aidevops and --region set to the same Region."
+  },
+  "installConfigs": [
+    {
+      "tool": "kiro",
+      "config": {
+        "mcpServers": {
+          "aws-devops-agent": {
+            "url": "https://connect.aidevops.<region>.api.aws/mcp",
+            "headers": {
+              "Authorization": "Bearer ${DEVOPS_AGENT_TOKEN}"
+            },
+            "timeout": 120000
+          }
+        }
+      },
+      "instructions": "Replace <region> with the AWS Region of your Agent Space (for example us-east-1). Create an access token in the DevOps Agent web app under Settings > Access Tokens (access tokens must first be turned on in the Agent Space's Configuration tab), set it as the environment variable DEVOPS_AGENT_TOKEN, and approve DEVOPS_AGENT_TOKEN in Kiro under Settings > MCP Approved Env Vars. To use your AWS credentials (SigV4) instead of a token, run the server as uvx mcp-proxy-for-aws@latest https://connect.aidevops.<region>.api.aws/mcp --service aidevops --region <region>. The aws-devops-agent Kiro power sets up both."
+    }
+  ]
+}
